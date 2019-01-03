@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<DialogPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.woloszyn.studyApp.CategoriesController"
+            prefHeight="200.0" prefWidth="400.0">
+
+    <content>
+        <GridPane gridLinesVisible="false" alignment="TOP_LEFT" hgap="30" vgap="20">
+            <!--<columnConstraints>-->
+                <!--<ColumnConstraints percentWidth="20"/>-->
+                <!--<ColumnConstraints percentWidth="50"/>-->
+                <!--<ColumnConstraints percentWidth="15"/>-->
+            <!--</columnConstraints>-->
+            <Label text="Add" GridPane.rowIndex="0" GridPane.columnIndex="4" GridPane.halignment="CENTER" />
+            <Label text="Name:"  GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="categoryName" GridPane.rowIndex="1" GridPane.columnIndex="1" GridPane.columnSpan="6"/>
+            <Button fx:id="addButton" onAction="#handleClicked" text="Add" GridPane.rowIndex="2" GridPane.columnIndex="6" GridPane.halignment="CENTER"/>
+            <Label text="Delete" GridPane.rowIndex="4" GridPane.columnIndex="4" GridPane.halignment="CENTER" />
+            <Label text="Select:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="categoryPicker" GridPane.rowIndex="5" GridPane.columnIndex="1" GridPane.columnSpan="5"/>
+            <CheckBox fx:id="removeCheckBox" text="Remove events aswell" GridPane.rowIndex="6" GridPane.columnIndex="0" GridPane.columnSpan="7"/>
+            <Button fx:id="removeButton" onAction="#handleClicked" text="Remove" GridPane.rowIndex="7" GridPane.columnIndex="6" GridPane.halignment="CENTER"/>
+        </GridPane>
+    </content>
+</DialogPane>

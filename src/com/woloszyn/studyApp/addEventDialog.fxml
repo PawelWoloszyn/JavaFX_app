@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.woloszyn.studyApp.AddEventController"
+            prefHeight="400.0" prefWidth="800.0">
+    <headerText>
+        Add new Important Event:
+    </headerText>
+    <content>
+        <GridPane vgap="15" hgap="20">
+            <Label text="Event name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="newEventName" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="Your notes:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextArea fx:id="newEventNotes"  GridPane.rowIndex="1" GridPane.columnIndex="1" wrapText="true"/>
+
+            <Label text="Category:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="categoryPicker" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        </GridPane>
+    </content>
+</DialogPane>

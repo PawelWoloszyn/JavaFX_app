@@ -1,0 +1,63 @@
+#toolbar_vbox{
+    -fx-background-color: #a1abba;
+}
+#button_1 {
+}
+
+
+#category_label{
+    -fx-font-size: 1.5em;
+    -fx-font-family: "Padauk Book";
+}
+
+#description_area{
+    -fx-font-size: 1.1em;
+}
+
+#queries_data {
+        -fx-font-size: 1.1em;
+       -fx-font-family: "Padauk Book";
+}
+
+#list_of_events {
+    -fx-font-family: "utkal";
+    -fx-font-size: 1em;
+}
+
+
+.list-view {
+    -fx-background-color: #778393;
+}
+
+
+
+.list-view .list-cell:odd:filled {
+    -fx-background-color: #a2bce5;
+    -fx-text-fill: black;
+}
+
+.list-view .list-cell:even:filled {
+    -fx-background-color: #93add6;
+    -fx-text-fill: black;
+}
+
+.list-view .list-cell:empty {
+    -fx-background-color: #8f9fba;
+}
+
+.list-view .list-cell:filled:hover  {
+    -fx-background-color: #61aeb7;
+}
+
+.list-view .list-cell:filled:selected {
+    -fx-background-color: #61aeb7;
+}
+
+.list-view .label {
+    -fx-text-fill: white;
+}
+
+
+
+#test{
+}

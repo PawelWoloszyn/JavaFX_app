@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.text.Font?>
+<BorderPane fx:id="mainBorderPaneWindow" fx:controller="com.woloszyn.studyApp.Controller"
+            maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            stylesheets="@style.css">
+    <left>
+        <HBox BorderPane.alignment="CENTER">
+            <children>
+                <VBox id="toolbar_vbox">
+                    <children>
+                        <Button id="button_1" mnemonicParsing="false" onAction="#showAddEventDialog">
+                            <tooltip>
+                                <Tooltip text="Add new Event"/>
+                            </tooltip>
+                            <VBox.margin>
+                                <Insets left="10" bottom="10.0" top="10.0" />
+                            </VBox.margin>
+                            <graphic>
+                                <ImageView>
+                                    <Image url="@/toolbarButtonGraphics/general/New24.gif"/>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#handleDeleteButton">
+                            <tooltip>
+                                <Tooltip text="Remove selected event"/>
+                            </tooltip>
+                            <VBox.margin>
+                                <Insets left="10" bottom="10.0" top="10.0" />
+                            </VBox.margin>
+                            <graphic>
+                                <ImageView>
+                                    <Image url="@/toolbarButtonGraphics/general/Delete24.gif"/>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#showEditEventDialog">
+                            <tooltip>
+                                <Tooltip text="Edit selected event"/>
+                            </tooltip>
+                            <VBox.margin>
+                                <Insets left="10" bottom="10.0" top="10.0"  />
+                            </VBox.margin>
+                            <graphic>
+                                <ImageView>
+                                    <Image url="@/toolbarButtonGraphics/general/Edit24.gif"/>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false">
+                            <VBox.margin>
+                                <Insets left="10" bottom="10.0" top="10.0" right="10"/>
+                            </VBox.margin>
+                            <graphic>
+                                <ImageView>
+                                    <Image url="@/toolbarButtonGraphics/general/About24.gif"/>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <!--<Button mnemonicParsing="false" text="Button">-->
+                            <!--<VBox.margin>-->
+                                <!--<Insets left="10" top="10.0" />-->
+                            <!--</VBox.margin>-->
+                        <!--</Button>-->
+                    </children>
+                </VBox>
+                <ListView fx:id="listOfEvents" id="list_of_events" onKeyPressed="#handleKeyPressed"  prefHeight="200.0" prefWidth="250.0" />
+            </children>
+        </HBox>
+    </left>
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Exit" onAction="#handleExit" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" onAction="#handleDeleteButton"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help" onAction="#handleAbout">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Categories">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Add/remove" onAction="#categoriesEventDialog"/>
+                        <SeparatorMenuItem/>
+                        <MenuItem text="Filter"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <VBox>
+            <children>
+                <Label id="category_label" fx:id="categoryDisplay" alignment="TOP_LEFT" text="Category" textAlignment="CENTER">
+                    <VBox.margin>
+                        <Insets left="15"/>
+                    </VBox.margin>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <effect>
+                        <Reflection />
+                    </effect>
+                    <font>
+                        <Font name="Helvetica"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                    </cursor>
+                </Label>
+                <TextArea id="description_area" fx:id="textArea" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" wrapText="true"  />
+            </children>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+            <HBox id="queries_data">
+                <Label text="QUERIES: ">
+                    <HBox.margin>
+                        <Insets left="10"/>
+                    </HBox.margin>
+                </Label>
+                <Label fx:id="queriesAmount" text="" />
+            </HBox>
+        </VBox>
+
+    </center>
+</BorderPane>

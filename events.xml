@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImportantEventData>
+  <ImportantEvent>
+    <name>Sputnik first space flight</name>
+    <description>Description of landing</description>
+    <category>category of landing</category>
+    <queries isEmpty="no">
+      <query>
+        <question>question1</question>
+        <answer>answer1</answer>
+      </query>
+      <query>
+        <question>question2</question>
+        <answer>answer2</answer>
+      </query>
+    </queries>
+  </ImportantEvent>
+  <ImportantEvent>
+    <name>Second important event</name>
+    <description>Descritpion which takes
+            more than one line</description>
+    <category>Medieval</category>
+    <queries isEmpty="yes" />
+  </ImportantEvent>
+  <ImportantEvent>
+    <name>A proper item</name>
+    <description>proper item msg</description>
+    <category>People</category>
+    <queries isEmpty="yes" />
+  </ImportantEvent>
+  <ImportantEvent>
+    <name>This should be valid</name>
+    <description>A valid one, adding some text</description>
+    <category>World war I</category>
+    <queries isEmpty="yes" />
+  </ImportantEvent>
+  <ImportantEvent>
+    <name>Test event #999</name>
+    <description>l(UnaryOperator&lt;E&gt; operator)
+Replaces each element of this list with the result of applying the operator to that element.
+boolean	retainAll(Collection&lt;?&gt; c)
+Retains only the elements in this list that are contained in the specified collection.
+E	set(int index, E element)
+Replaces the element at the specified position in this list with the specified element.
+int	size()
+Returns the number of elements in this list.
+void	sort(Comparator&lt;? super E&gt; c)
+Sorts this list according to the order induced by the specified Comparator.
+Spliterator&lt;E&gt;	spliterator()
+Creates a late-binding and fail-fast Spliterator over the elements in this list.
+List&lt;E&gt;	subList(int fromIndex, int toIndex)
+Returns a view of the portion of this list between the specified fromIndex, inclusive, and toIndex, exclusive.
+Object[]	toArray()
+Returns an array containing all of the elements in this list in proper sequence (</description>
+    <category>World war I</category>
+    <queries isEmpty="yes" />
+  </ImportantEvent>
+  <ImportantEvent>
+    <name>A test event #1000</name>
+    <description>Test event description</description>
+    <category>People</category>
+    <queries isEmpty="yes" />
+  </ImportantEvent>
+  <ImportantEvent>
+    <name>Test event #12</name>
+    <description>Test event #1231 description
+It was edited though</description>
+    <category>Astrophysics</category>
+    <queries isEmpty="yes" />
+  </ImportantEvent>
+  <ImportantEvent>
+    <name>TestEvent</name>
+    <description>test1
+test2
+test3
+test4</description>
+    <category>Astrophysics</category>
+    <queries isEmpty="yes" />
+  </ImportantEvent>
+</ImportantEventData>
